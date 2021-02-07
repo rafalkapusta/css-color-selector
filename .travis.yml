@@ -12,7 +12,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: TOKEN
-  local_dir: dist
-  edge: true
+  local_dir: build
   on:
     branch: main
