@@ -1,17 +1,18 @@
 language: node_js
 node_js: stable
 
-cache:
-  directories:
-    - node_modules
+cache: npm
 
-before_deploy:
-  - "npm run build"
+install:
+  - npm install
+script:
+  - npm test
+  - npm run build
 
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: TOKEN
+  github_token: $TOKEN
   local_dir: build
   on:
     branch: main
