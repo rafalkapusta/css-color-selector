@@ -7,10 +7,7 @@ import SaveColor from './SaveColor';
 import SavedColorsList from './SavedColorsList';
 
 const TaskOne: FC = () => {
-  const [state, dispatch] = useReducer<Reducer<State, ActionType>>(
-    reducer,
-    initialState
-  );
+  const [state, dispatch] = useReducer<Reducer<State, ActionType>>(reducer, initialState);
 
   const { boxColor, typedColor, results, savedColors, error } = state;
 
@@ -24,11 +21,7 @@ const TaskOne: FC = () => {
       {error && <div className="notification is-danger is-light">{error}</div>}
       <Box boxColor={boxColor} typedColor={typedColor} />
       <div className="is-flex">
-        <Autocomplete
-          typedColor={typedColor}
-          results={results}
-          dispatch={dispatch}
-        />
+        <Autocomplete typedColor={typedColor} results={results} dispatch={dispatch} />
         <SaveColor dispatch={dispatch} />
       </div>
       <SavedColorsList savedColors={savedColors} dispatch={dispatch} />

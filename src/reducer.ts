@@ -17,12 +17,7 @@ export const reducer = (state: State, action: ActionType) => {
         ...state,
         typedColor: action.payload,
         boxColor: boxColor,
-        results:
-          action.payload && !boxColor
-            ? boxColorsList.filter((color) =>
-                color.startsWith(action.payload.toLowerCase())
-              )
-            : [],
+        results: action.payload && !boxColor ? boxColorsList.filter((color) => color.startsWith(action.payload.toLowerCase())) : [],
         error: '',
       };
     case 'SAVE_COLOR':

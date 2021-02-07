@@ -15,13 +15,7 @@ const Autocomplete: FC<Props> = ({ typedColor, results, dispatch }) => {
   return (
     <div className="field">
       <div className="control">
-        <input
-          className="input"
-          type="text"
-          placeholder="type color"
-          value={typedColor}
-          onChange={(event) => changeBoxColor(event.target.value)}
-        />
+        <input className="input" type="text" placeholder="type color" value={typedColor} onChange={(event) => changeBoxColor(event.target.value)} />
       </div>
       <div className="autocomplete-list">
         {results.map((color) => (
