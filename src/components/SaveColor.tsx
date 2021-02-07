@@ -7,10 +7,7 @@ type Props = {
 
 const SaveColor: FC<Props> = ({ dispatch }) => {
   return (
-    <button
-      className="button is-primary ml-4"
-      onClick={() => dispatch({ type: 'SAVE_COLOR' })}
-    >
+    <button className="button is-primary ml-4" onClick={() => dispatch({ type: 'SAVE_COLOR' })}>
       Save color
     </button>
   );
