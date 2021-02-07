@@ -1,5 +1,5 @@
 import React, { Dispatch, FC } from 'react';
-import { ActionType } from '../types';
+import { ActionType } from 'types';
 
 type Props = {
   typedColor: string;
